@@ -1,0 +1,102 @@
+html {
+  font-family: "Silkscreen", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  min-height: 100vh;
+  color: #000000;
+  background-color: #FFD1D5;
+  background-size: cover;
+}
+
+h1 {
+  margin: 0 auto 10px auto;
+  padding:24px 0;
+  font-size: 48px;
+  color: #000000;
+  background-color: #FA6E79;
+  border-bottom: 6px solid #000000;
+}
+
+p {
+  margin: 0;
+}
+
+.app-message {
+  height: auto;
+  margin: 10px auto 20px auto;
+  font-size: 24px;
+}
+
+.app-container {
+  max-width: 600px;
+  width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  border-radius: 5px;
+  padding-bottom: 40px;
+  background-color: #F6E8E0;
+  box-shadow: 8px 8px 0px #000000;
+  border: 6px solid #000;
+
+}
+
+
+.app-counter-box {
+  font-size: 300%;
+  position: relative;
+  color: #000;
+}
+
+.btn-start {
+  font-family: 'Silkscreen';
+  top: 50px;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #000;
+  padding: 16px 40px;
+  background-color: #FA6E79;
+  border: #000 solid 4px;
+  border-radius: 2px;
+  margin-top: 2em;
+  box-shadow: 0 8px 0 #000;
+}
+
+.btn-pause {
+  font-family: 'Silkscreen';
+  top: 50px;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #000;
+  padding: 16px 40px;
+  background-color: #FFA2AC;
+  border: #000 solid 4px;
+  border-radius: 2px;
+  margin-top: 2em;
+  box-shadow: 0 8px 0 #000;
+}
+
+.btn-reset {
+  font-family: 'Silkscreen';
+  top: 50px;
+  font-size: 80%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #000;
+  padding: 16px 40px;
+  background-color: #EC273F;
+  border: #000 solid 4px;
+  border-radius: 2px;
+  margin-top: 2em;
+  box-shadow: 0 8px 0 #000;
+}
