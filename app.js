@@ -174,7 +174,7 @@ const shortBreakTimer = () =>{
 
     clearInterval(myInterval);
 
-    minutesDefault = "1";
+    minutesDefault = "5";
     secondsDefault = "00";
 
     minuteDiv.textContent = minutesDefault;
