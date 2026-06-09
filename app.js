@@ -39,6 +39,16 @@ const appTimer = () => {
 
   if (state) {
     state = false;
+
+    if(gifBreak == false){
+      pomoCat.src = "./assets/pomocat-break.gif";
+
+    } else if(gifActive == false){
+      pomoCat.src = "./assets/pomocat-active.gif";
+
+    } else{
+      pomoCat.src = "./assets/pomocat-pause.png";
+    }
   
     const updateSeconds = () => {
 
@@ -58,16 +68,6 @@ const appTimer = () => {
         if (minutesLeft === 0 && secondsLeft === 0) {
             bells.play();
             clearInterval(myInterval);
-        }
-
-        if(gifBreak == false){
-          pomoCat.src = "./assets/pomocat-break.gif";
-
-        } else if(gifActive == false){
-          pomoCat.src = "./assets/pomocat-active.gif";
-
-        } else{
-          pomoCat.src = "./assets/pomocat-pause.png";
         }
 
     };
@@ -126,8 +126,6 @@ resetBtn.addEventListener("click", appReset);
 const pomodoroTimer = () =>{
   if(pomodoro){
     state = true;
-    gifActive = false;
-    gifBreak = true;
 
     clearInterval(myInterval);
 
@@ -141,6 +139,9 @@ const pomodoroTimer = () =>{
 
     pomoCat.src = "./assets/pomocat-pause.png"
 
+    gifActive = false;
+    gifBreak = true;
+
   }
 
 }
@@ -153,8 +154,6 @@ pomodoroBtn.addEventListener("click", pomodoroTimer);
 const shortBreakTimer = () =>{
   if(shortBreak){
     state=true;
-    gifBreak = false;
-    gifActive = true;
 
     clearInterval(myInterval);
 
@@ -168,6 +167,9 @@ const shortBreakTimer = () =>{
     totalSeconds = sessionShortBreakAmount * 60;
 
     pomoCat.src = "./assets/pomocat-pause.png"
+    
+    gifBreak = false;
+    gifActive = true;
 
   } 
 
@@ -180,8 +182,6 @@ shortBreakBtn.addEventListener("click", shortBreakTimer);
 const longBreakTimer = () =>{
   if(longBreak){
     state=true;
-    gifBreak = false;
-    gifActive = true;
 
     clearInterval(myInterval);
 
@@ -196,8 +196,20 @@ const longBreakTimer = () =>{
 
     pomoCat.src = "./assets/pomocat-pause.png"
 
+    gifBreak = false;
+    gifActive = true;
+
   } 
 
 }
 
 longBreakBtn.addEventListener("click", longBreakTimer);
+
+
+
+
+
+
+
+
+
