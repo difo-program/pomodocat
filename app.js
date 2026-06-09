@@ -1,7 +1,17 @@
 const bells = new Audio("./sounds/TimesOver.wav");
+const click = new Audio("./sounds/click.wav");
 const startBtn = document.querySelector(".btn-start");
 const pauseBtn = document.querySelector(".btn-pause");
 const resetBtn = document.querySelector(".btn-reset");
+
+document.getElementById("cursorstartBtn").style.cursor = "pointer";
+document.getElementById("cursorpauseBtn").style.cursor = "pointer";
+document.getElementById("cursorresetBtn").style.cursor = "pointer";
+
+document.getElementById("cursorpomodoroBtn").style.cursor = "pointer";
+document.getElementById("cursorshortBreakBtn").style.cursor = "pointer";
+document.getElementById("cursorlongBreakBtn").style.cursor = "pointer";
+
 
 let gifActive = false;
 let gifBreak = true;
@@ -76,6 +86,8 @@ const appTimer = () => {
   } else {
     alert("Session has already started.");
   }
+
+  click.play()
   
 };
 
@@ -93,8 +105,9 @@ const appPause = () =>{
       clearInterval(myInterval);
 
       pomoCat.src = "./assets/pomocat-pause.png"
+
+      click.play()
   }
-  console.log("Pausado");
 
 
 }
@@ -114,6 +127,8 @@ const appReset = () =>{
 
     totalSeconds = Number.parseInt(minuteDiv.textContent) * 60;
     pomoCat.src = "./assets/pomocat-pause.png"
+
+    click.play()
     
   }
 
@@ -142,6 +157,8 @@ const pomodoroTimer = () =>{
     gifActive = false;
     gifBreak = true;
 
+    click.play()
+
   }
 
 }
@@ -157,7 +174,7 @@ const shortBreakTimer = () =>{
 
     clearInterval(myInterval);
 
-    minutesDefault = "5";
+    minutesDefault = "1";
     secondsDefault = "00";
 
     minuteDiv.textContent = minutesDefault;
@@ -170,6 +187,8 @@ const shortBreakTimer = () =>{
     
     gifBreak = false;
     gifActive = true;
+
+    click.play()
 
   } 
 
@@ -198,6 +217,8 @@ const longBreakTimer = () =>{
 
     gifBreak = false;
     gifActive = true;
+
+    click.play()
 
   } 
 
