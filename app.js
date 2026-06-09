@@ -1,4 +1,4 @@
-const bells = new Audio("./sounds/bell.wav");
+const bells = new Audio("./sounds/TimesOver.wav");
 const startBtn = document.querySelector(".btn-start");
 const pauseBtn = document.querySelector(".btn-pause");
 const resetBtn = document.querySelector(".btn-reset");
